@@ -520,6 +520,7 @@ export default function HeroSection() {
                     right-[12%]
                     text-[28px]
                     md:text-[40px]
+                    
                 "
             >
                 ✦
@@ -589,6 +590,7 @@ export default function HeroSection() {
                         textAnchor="middle"
                         fontSize="52"
                         fill="black"
+                        
                     >
                         ✦
                     </text>

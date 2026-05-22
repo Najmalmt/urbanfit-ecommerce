@@ -229,6 +229,979 @@
 //         </header>
 //     );
 // }
+// import React from "react";
+
+// import {
+//     Search,
+//     ChevronDown,
+//     CircleUser,
+//     ShoppingCart,
+// } from "lucide-react";
+
+// export default function Navbar() {
+//     return (
+//         <header className="w-full bg-white border-b border-black/5">
+
+//             <div
+//                 className="
+//                     max-w-[1280px]
+//                     mx-auto
+//                     h-[78px]
+//                     px-6
+//                     flex
+//                     items-center
+//                     justify-between
+//                 "
+//             >
+
+//                 {/* ================= LEFT SIDE ================= */}
+
+//                 <div className="flex items-center gap-10">
+
+//                     {/* ================= LOGO ================= */}
+
+//                     <h1
+//                         className="
+//                             text-[37px]
+//                             font-black
+//                             uppercase
+//                             italic
+//                             tracking-[-2px]
+//                             leading-none
+//                             cursor-pointer
+//                             skew-x-[-3deg]
+//                             select-none
+//                             transition-all
+//                             duration-300
+//                             hover:scale-[1.02]
+//                         "
+//                     >
+
+//                         {/* URBAN */}
+
+//                         <span
+//                             className="
+//                                 text-black
+//                                 [-webkit-text-stroke:1.2px_black]
+//                                 [text-shadow:
+//                                     1px_1px_0_#000,
+//                                     2px_2px_0_#000,
+//                                     3px_3px_0_#000]
+//                             "
+//                         >
+//                             URBAN
+//                         </span>
+
+//                         {/* FIT */}
+
+//                         <span
+//                             className="
+//                                 text-white
+//                                 [-webkit-text-stroke:1.2px_black]
+//                                 [text-shadow:
+//                                     1px_1px_0_#000,
+//                                     2px_2px_0_#000,
+//                                     3px_3px_0_#000]
+//                             "
+//                         >
+//                             FIT
+//                         </span>
+//                     </h1>
+
+//                     {/* ================= NAV LINKS ================= */}
+
+//                     <nav
+//                         className="
+//                             hidden
+//                             lg:flex
+//                             items-center
+//                             gap-8
+//                             text-[14px]
+//                             font-medium
+//                         "
+//                     >
+
+//                         {/* SHOP */}
+
+//                         <button
+//                             className="
+//                                 flex
+//                                 items-center
+//                                 gap-1.5
+//                                 hover:opacity-70
+//                                 transition-all
+//                                 duration-300
+//                             "
+//                         >
+//                             SHOP
+
+//                             <ChevronDown
+//                                 size={16}
+//                                 strokeWidth={2.2}
+//                             />
+//                         </button>
+
+//                         {/* ON SALE */}
+
+//                         <button
+//                             className="
+//                                 hover:opacity-70
+//                                 transition-all
+//                                 duration-300
+//                             "
+//                         >
+//                             ON SALE
+//                         </button>
+
+//                         {/* NEW ARRIVALS */}
+
+//                         <button
+//                             className="
+//                                 hover:opacity-70
+//                                 transition-all
+//                                 duration-300
+//                             "
+//                         >
+//                             NEW ARRIVALS
+//                         </button>
+
+//                         {/* BRANDS */}
+
+//                         <button
+//                             className="
+//                                 hover:opacity-70
+//                                 transition-all
+//                                 duration-300
+//                             "
+//                         >
+//                             BRANDS
+//                         </button>
+
+//                     </nav>
+//                 </div>
+
+//                 {/* ================= RIGHT SIDE ================= */}
+
+//                 <div className="flex items-center gap-4">
+
+//                     {/* ================= SEARCH BAR ================= */}
+
+//                     <div
+//                         className="
+//                             hidden
+//                             md:flex
+//                             items-center
+//                             gap-3
+//                             w-[420px]
+//                             h-[48px]
+//                             rounded-full
+//                             border
+//                             border-black/10
+//                             px-5
+//                             bg-[#fafafa]
+//                             transition-all
+//                             duration-300
+//                             focus-within:border-black/30
+//                             focus-within:bg-white
+//                         "
+//                     >
+
+//                         <Search
+//                             size={18}
+//                             className="text-black/40"
+//                         />
+
+//                         <input
+//                             type="text"
+//                             placeholder="Search for products..."
+//                             className="
+//                                 w-full
+//                                 bg-transparent
+//                                 outline-none
+//                                 text-[14px]
+//                                 placeholder:text-black/35
+//                             "
+//                         />
+//                     </div>
+
+//                     {/* ================= CART BUTTON ================= */}
+
+//                     <button
+//                         className="
+//                             relative
+//                             w-[42px]
+//                             h-[42px]
+//                             rounded-full
+//                             border
+//                             border-black/15
+//                             flex
+//                             items-center
+//                             justify-center
+//                             hover:bg-black
+//                             hover:text-white
+//                             transition-all
+//                             duration-300
+//                         "
+//                     >
+
+//                         <ShoppingCart
+//                             size={22}
+//                             strokeWidth={1.8}
+//                         />
+
+//                         {/* CART COUNT */}
+
+//                         <div
+//                             className="
+//                                 absolute
+//                                 -top-2
+//                                 -right-2
+//                                 w-5
+//                                 h-5
+//                                 rounded-full
+//                                 bg-black
+//                                 text-white
+//                                 text-[10px]
+//                                 font-semibold
+//                                 flex
+//                                 items-center
+//                                 justify-center
+//                                 border
+//                                 border-white
+//                             "
+//                         >
+//                             2
+//                         </div>
+//                     </button>
+
+//                     {/* ================= USER BUTTON ================= */}
+
+//                     <button
+//                         className="
+//                             w-[42px]
+//                             h-[42px]
+//                             rounded-full
+//                             border
+//                             border-black/15
+//                             flex
+//                             items-center
+//                             justify-center
+//                             hover:bg-black
+//                             hover:text-white
+//                             transition-all
+//                             duration-300
+//                         "
+//                     >
+//                         <CircleUser
+//                             size={22}
+//                             strokeWidth={1.8}
+//                         />
+//                     </button>
+
+//                 </div>
+//             </div>
+//         </header>
+//     );
+// }
+
+
+
+// import React from "react";
+
+// import {
+//     Search,
+//     ChevronDown,
+//     CircleUser,
+//     ShoppingCart,
+//     Menu,
+// } from "lucide-react";
+
+// export default function Navbar() {
+//     return (
+//         <header className="w-full bg-white border-b border-black/5">
+
+//             {/* MAIN CONTAINER */}
+
+//             <div
+//                 className="
+//                     max-w-[1280px]
+//                     mx-auto
+//                     h-[72px]
+//                     lg:h-[78px]
+//                     px-4
+//                     sm:px-6
+//                     lg:px-8
+//                     flex
+//                     items-center
+//                     justify-between
+//                     gap-4
+//                 "
+//             >
+
+//                 {/* ================= LEFT SIDE ================= */}
+
+//                 <div className="flex items-center gap-4 lg:gap-10">
+
+//                     {/* MOBILE MENU BUTTON */}
+
+//                     <button
+//                         className="
+//                             lg:hidden
+//                             flex
+//                             items-center
+//                             justify-center
+//                             w-10
+//                             h-10
+//                             rounded-full
+//                             border
+//                             border-black/10
+//                             hover:bg-black
+//                             hover:text-white
+//                             transition-all
+//                             duration-300
+//                         "
+//                     >
+//                         <Menu size={22} />
+//                     </button>
+
+//                     {/* ================= LOGO ================= */}
+
+//                     <h1
+//                         className="
+//                             text-[24px]
+//                             sm:text-[30px]
+//                             lg:text-[37px]
+//                             font-black
+//                             uppercase
+//                             italic
+//                             tracking-[-1px]
+//                             lg:tracking-[-2px]
+//                             leading-none
+//                             cursor-pointer
+//                             skew-x-[-3deg]
+//                             select-none
+//                             whitespace-nowrap
+//                             transition-all
+//                             duration-300
+//                             hover:scale-[1.02]
+//                         "
+//                     >
+
+//                         {/* URBAN */}
+
+//                         <span
+//                             className="
+//                                 text-black
+//                                 [-webkit-text-stroke:1px_black]
+//                                 [text-shadow:
+//                                     1px_1px_0_#000,
+//                                     2px_2px_0_#000]
+//                             "
+//                         >
+//                             URBAN
+//                         </span>
+
+//                         {/* FIT */}
+
+//                         <span
+//                             className="
+//                                 text-white
+//                                 [-webkit-text-stroke:1px_black]
+//                                 [text-shadow:
+//                                     1px_1px_0_#000,
+//                                     2px_2px_0_#000]
+//                             "
+//                         >
+//                             FIT
+//                         </span>
+//                     </h1>
+
+//                     {/* ================= NAV LINKS ================= */}
+
+//                     <nav
+//                         className="
+//                             hidden
+//                             lg:flex
+//                             items-center
+//                             gap-8
+//                             text-[14px]
+//                             font-medium
+//                         "
+//                     >
+
+//                         {/* SHOP */}
+
+//                         <button
+//                             className="
+//                                 flex
+//                                 items-center
+//                                 gap-1.5
+//                                 hover:opacity-70
+//                                 transition-all
+//                                 duration-300
+//                             "
+//                         >
+//                             SHOP
+
+//                             <ChevronDown
+//                                 size={16}
+//                                 strokeWidth={2.2}
+//                             />
+//                         </button>
+
+//                         <button
+//                             className="
+//                                 hover:opacity-70
+//                                 transition-all
+//                                 duration-300
+//                             "
+//                         >
+//                             ON SALE
+//                         </button>
+
+//                         <button
+//                             className="
+//                                 hover:opacity-70
+//                                 transition-all
+//                                 duration-300
+//                             "
+//                         >
+//                             NEW ARRIVALS
+//                         </button>
+
+//                         <button
+//                             className="
+//                                 hover:opacity-70
+//                                 transition-all
+//                                 duration-300
+//                             "
+//                         >
+//                             BRANDS
+//                         </button>
+
+//                     </nav>
+//                 </div>
+
+//                 {/* ================= RIGHT SIDE ================= */}
+
+//                 <div className="flex items-center gap-2 sm:gap-3 lg:gap-4">
+
+//                     {/* ================= SEARCH BAR ================= */}
+
+//                     <div
+//                         className="
+//                             hidden
+//                             md:flex
+//                             items-center
+//                             gap-3
+//                             w-[240px]
+//                             lg:w-[420px]
+//                             h-[44px]
+//                             rounded-full
+//                             border
+//                             border-black/10
+//                             px-4
+//                             lg:px-5
+//                             bg-[#fafafa]
+//                             transition-all
+//                             duration-300
+//                             focus-within:border-black/30
+//                             focus-within:bg-white
+//                         "
+//                     >
+
+//                         <Search
+//                             size={18}
+//                             className="text-black/40"
+//                         />
+
+//                         <input
+//                             type="text"
+//                             placeholder="Search products..."
+//                             className="
+//                                 w-full
+//                                 bg-transparent
+//                                 outline-none
+//                                 text-[13px]
+//                                 lg:text-[14px]
+//                                 placeholder:text-black/35
+//                             "
+//                         />
+//                     </div>
+
+//                     {/* MOBILE SEARCH BUTTON */}
+
+//                     <button
+//                         className="
+//                             md:hidden
+//                             w-10
+//                             h-10
+//                             rounded-full
+//                             border
+//                             border-black/15
+//                             flex
+//                             items-center
+//                             justify-center
+//                             hover:bg-black
+//                             hover:text-white
+//                             transition-all
+//                             duration-300
+//                         "
+//                     >
+//                         <Search size={20} />
+//                     </button>
+
+//                     {/* ================= CART BUTTON ================= */}
+
+//                     <button
+//                         className="
+//                             relative
+//                             w-10
+//                             h-10
+//                             sm:w-[42px]
+//                             sm:h-[42px]
+//                             rounded-full
+//                             border
+//                             border-black/15
+//                             flex
+//                             items-center
+//                             justify-center
+//                             hover:bg-black
+//                             hover:text-white
+//                             transition-all
+//                             duration-300
+//                         "
+//                     >
+
+//                         <ShoppingCart
+//                             size={20}
+//                             strokeWidth={1.8}
+//                         />
+
+//                         {/* CART COUNT */}
+
+//                         <div
+//                             className="
+//                                 absolute
+//                                 -top-1.5
+//                                 -right-1.5
+//                                 w-5
+//                                 h-5
+//                                 rounded-full
+//                                 bg-black
+//                                 text-white
+//                                 text-[10px]
+//                                 font-semibold
+//                                 flex
+//                                 items-center
+//                                 justify-center
+//                                 border
+//                                 border-white
+//                             "
+//                         >
+//                             2
+//                         </div>
+//                     </button>
+
+//                     {/* ================= USER BUTTON ================= */}
+
+//                     <button
+//                         className="
+//                             w-10
+//                             h-10
+//                             sm:w-[42px]
+//                             sm:h-[42px]
+//                             rounded-full
+//                             border
+//                             border-black/15
+//                             flex
+//                             items-center
+//                             justify-center
+//                             hover:bg-black
+//                             hover:text-white
+//                             transition-all
+//                             duration-300
+//                         "
+//                     >
+//                         <CircleUser
+//                             size={20}
+//                             strokeWidth={1.8}
+//                         />
+//                     </button>
+
+//                 </div>
+//             </div>
+//         </header>
+//     );
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+// import React from "react";
+
+// import {
+//     Search,
+//     ChevronDown,
+//     CircleUser,
+//     ShoppingCart,
+//     Menu,
+// } from "lucide-react";
+
+// export default function Navbar() {
+//     return (
+//         <header className="w-full bg-white border-b border-black/5">
+
+//             {/* ================= MAIN CONTAINER ================= */}
+
+//             <div
+//                 className="
+//                     max-w-[1280px]
+//                     mx-auto
+//                     h-[70px]
+//                     lg:h-[78px]
+//                     px-4
+//                     sm:px-6
+//                     lg:px-8
+//                     flex
+//                     items-center
+//                     justify-between
+//                     gap-4
+//                 "
+//             >
+
+//                 {/* ================= LEFT SIDE ================= */}
+
+//                 <div
+//                     className="
+//                         flex
+//                         items-center
+//                         gap-3
+//                         xl:gap-8
+//                         min-w-0
+//                     "
+//                 >
+
+//                     {/* ================= MOBILE MENU ================= */}
+
+//                     <button
+//                         className="
+//                             lg:hidden
+//                             flex
+//                             items-center
+//                             justify-center
+//                             w-10
+//                             h-10
+//                             rounded-full
+//                             border
+//                             border-black/10
+//                             hover:bg-black
+//                             hover:text-white
+//                             transition-all
+//                             duration-300
+//                             flex-shrink-0
+//                         "
+//                     >
+//                         <Menu size={22} />
+//                     </button>
+
+//                     {/* ================= LOGO ================= */}
+
+//                     <h1
+//                         className="
+//                             text-[22px]
+//                             sm:text-[26px]
+//                             md:text-[30px]
+//                             xl:text-[37px]
+//                             font-black
+//                             uppercase
+//                             italic
+//                             tracking-[-1px]
+//                             xl:tracking-[-2px]
+//                             leading-none
+//                             cursor-pointer
+//                             skew-x-[-3deg]
+//                             select-none
+//                             whitespace-nowrap
+//                             transition-all
+//                             duration-300
+//                             hover:scale-[1.02]
+//                             flex-shrink-0
+//                         "
+//                     >
+
+//                         {/* URBAN */}
+
+//                         <span
+//                             className="
+//                                 text-black
+//                                 [-webkit-text-stroke:1px_black]
+//                                 [text-shadow:
+//                                     1px_1px_0_#000,
+//                                     2px_2px_0_#000]
+//                             "
+//                         >
+//                             URBAN
+//                         </span>
+
+//                         {/* FIT */}
+
+//                         <span
+//                             className="
+//                                 text-white
+//                                 [-webkit-text-stroke:1px_black]
+//                                 [text-shadow:
+//                                     1px_1px_0_#000,
+//                                     2px_2px_0_#000]
+//                             "
+//                         >
+//                             FIT
+//                         </span>
+//                     </h1>
+
+//                     {/* ================= NAV LINKS ================= */}
+
+//                     <nav
+//                         className="
+//                             hidden
+//                             lg:flex
+//                             items-center
+//                             gap-4
+//                             xl:gap-7
+//                             text-[12px]
+//                             xl:text-[14px]
+//                             font-medium
+//                             whitespace-nowrap
+//                         "
+//                     >
+
+//                         {/* SHOP */}
+
+//                         <button
+//                             className="
+//                                 flex
+//                                 items-center
+//                                 gap-1
+//                                 hover:opacity-70
+//                                 transition-all
+//                                 duration-300
+//                             "
+//                         >
+//                             SHOP
+
+//                             <ChevronDown
+//                                 size={15}
+//                                 strokeWidth={2.2}
+//                             />
+//                         </button>
+
+//                         {/* ON SALE */}
+
+//                         <button
+//                             className="
+//                                 hover:opacity-70
+//                                 transition-all
+//                                 duration-300
+//                             "
+//                         >
+//                             ON SALE
+//                         </button>
+
+//                         {/* NEW ARRIVALS */}
+
+//                         <button
+//                             className="
+//                                 hover:opacity-70
+//                                 transition-all
+//                                 duration-300
+//                             "
+//                         >
+//                             NEW ARRIVALS
+//                         </button>
+
+//                         {/* BRANDS */}
+
+//                         <button
+//                             className="
+//                                 hover:opacity-70
+//                                 transition-all
+//                                 duration-300
+//                             "
+//                         >
+//                             BRANDS
+//                         </button>
+
+//                     </nav>
+//                 </div>
+
+//                 {/* ================= RIGHT SIDE ================= */}
+
+//                 <div
+//                     className="
+//                         flex
+//                         items-center
+//                         gap-2
+//                         lg:gap-3
+//                         flex-shrink-0
+//                     "
+//                 >
+
+//                     {/* ================= SEARCH BAR ================= */}
+
+//                     <div
+//                         className="
+//                             hidden
+//                             md:flex
+//                             items-center
+//                             gap-2
+//                             w-[180px]
+//                             lg:w-[240px]
+//                             xl:w-[360px]
+//                             h-[42px]
+//                             rounded-full
+//                             border
+//                             border-black/10
+//                             px-4
+//                             bg-[#fafafa]
+//                             transition-all
+//                             duration-300
+//                             focus-within:border-black/30
+//                             focus-within:bg-white
+//                         "
+//                     >
+
+//                         <Search
+//                             size={17}
+//                             className="text-black/40"
+//                         />
+
+//                         <input
+//                             type="text"
+//                             placeholder="Search products..."
+//                             className="
+//                                 w-full
+//                                 bg-transparent
+//                                 outline-none
+//                                 text-[13px]
+//                                 placeholder:text-black/35
+//                             "
+//                         />
+//                     </div>
+
+//                     {/* ================= MOBILE SEARCH ================= */}
+
+//                     <button
+//                         className="
+//                             md:hidden
+//                             w-10
+//                             h-10
+//                             rounded-full
+//                             border
+//                             border-black/15
+//                             flex
+//                             items-center
+//                             justify-center
+//                             hover:bg-black
+//                             hover:text-white
+//                             transition-all
+//                             duration-300
+//                         "
+//                     >
+//                         <Search size={20} />
+//                     </button>
+
+//                     {/* ================= CART BUTTON ================= */}
+
+//                     <button
+//                         className="
+//                             relative
+//                             w-10
+//                             h-10
+//                             sm:w-[42px]
+//                             sm:h-[42px]
+//                             rounded-full
+//                             border
+//                             border-black/15
+//                             flex
+//                             items-center
+//                             justify-center
+//                             hover:bg-black
+//                             hover:text-white
+//                             transition-all
+//                             duration-300
+//                         "
+//                     >
+
+//                         <ShoppingCart
+//                             size={20}
+//                             strokeWidth={1.8}
+//                         />
+
+//                         {/* CART COUNT */}
+
+//                         <div
+//                             className="
+//                                 absolute
+//                                 -top-1.5
+//                                 -right-1.5
+//                                 w-5
+//                                 h-5
+//                                 rounded-full
+//                                 bg-black
+//                                 text-white
+//                                 text-[10px]
+//                                 font-semibold
+//                                 flex
+//                                 items-center
+//                                 justify-center
+//                                 border
+//                                 border-white
+//                             "
+//                         >
+//                             2
+//                         </div>
+//                     </button>
+
+//                     {/* ================= USER BUTTON ================= */}
+
+//                     <button
+//                         className="
+//                             w-10
+//                             h-10
+//                             sm:w-[42px]
+//                             sm:h-[42px]
+//                             rounded-full
+//                             border
+//                             border-black/15
+//                             flex
+//                             items-center
+//                             justify-center
+//                             hover:bg-black
+//                             hover:text-white
+//                             transition-all
+//                             duration-300
+//                         "
+//                     >
+//                         <CircleUser
+//                             size={20}
+//                             strokeWidth={1.8}
+//                         />
+//                     </button>
+
+//                 </div>
+//             </div>
+//         </header>
+//     );
+// }
+
 import React from "react";
 
 import {
@@ -236,44 +1209,93 @@ import {
     ChevronDown,
     CircleUser,
     ShoppingCart,
+    Menu,
 } from "lucide-react";
 
 export default function Navbar() {
     return (
         <header className="w-full bg-white border-b border-black/5">
 
+            {/* ================= MAIN CONTAINER ================= */}
+
             <div
                 className="
                     max-w-[1280px]
                     mx-auto
-                    h-[78px]
-                    px-6
+                    h-[70px]
+                    lg:h-[78px]
+                    px-4
+                    sm:px-6
+                    lg:px-8
                     flex
                     items-center
                     justify-between
+                    gap-4
                 "
             >
 
                 {/* ================= LEFT SIDE ================= */}
 
-                <div className="flex items-center gap-10">
+                <div
+                    className="
+                        flex
+                        items-center
+                        gap-3
+                        xl:gap-8
+                        min-w-0
+                    "
+                >
+
+                    {/* ================= MOBILE MENU ================= */}
+
+                    <button
+                        className="
+                            lg:hidden
+                            flex
+                            items-center
+                            justify-center
+                            w-9
+                            h-9
+                            sm:w-10
+                            sm:h-10
+                            rounded-full
+                            border
+                            border-black/10
+                            hover:bg-black
+                            hover:text-white
+                            transition-all
+                            duration-300
+                            flex-shrink-0
+                        "
+                    >
+                        <Menu
+                            size={19}
+                            className="sm:size-[22px]"
+                        />
+                    </button>
 
                     {/* ================= LOGO ================= */}
 
                     <h1
                         className="
-                            text-[37px]
+                            text-[22px]
+                            sm:text-[26px]
+                            md:text-[30px]
+                            xl:text-[37px]
                             font-black
                             uppercase
                             italic
-                            tracking-[-2px]
+                            tracking-[-1px]
+                            xl:tracking-[-2px]
                             leading-none
                             cursor-pointer
                             skew-x-[-3deg]
                             select-none
+                            whitespace-nowrap
                             transition-all
                             duration-300
                             hover:scale-[1.02]
+                            flex-shrink-0
                         "
                     >
 
@@ -282,11 +1304,10 @@ export default function Navbar() {
                         <span
                             className="
                                 text-black
-                                [-webkit-text-stroke:1.2px_black]
+                                [-webkit-text-stroke:1px_black]
                                 [text-shadow:
                                     1px_1px_0_#000,
-                                    2px_2px_0_#000,
-                                    3px_3px_0_#000]
+                                    2px_2px_0_#000]
                             "
                         >
                             URBAN
@@ -297,11 +1318,10 @@ export default function Navbar() {
                         <span
                             className="
                                 text-white
-                                [-webkit-text-stroke:1.2px_black]
+                                [-webkit-text-stroke:1px_black]
                                 [text-shadow:
                                     1px_1px_0_#000,
-                                    2px_2px_0_#000,
-                                    3px_3px_0_#000]
+                                    2px_2px_0_#000]
                             "
                         >
                             FIT
@@ -315,9 +1335,12 @@ export default function Navbar() {
                             hidden
                             lg:flex
                             items-center
-                            gap-8
-                            text-[14px]
+                            gap-4
+                            xl:gap-7
+                            text-[12px]
+                            xl:text-[14px]
                             font-medium
+                            whitespace-nowrap
                         "
                     >
 
@@ -327,7 +1350,7 @@ export default function Navbar() {
                             className="
                                 flex
                                 items-center
-                                gap-1.5
+                                gap-1
                                 hover:opacity-70
                                 transition-all
                                 duration-300
@@ -336,7 +1359,7 @@ export default function Navbar() {
                             SHOP
 
                             <ChevronDown
-                                size={16}
+                                size={15}
                                 strokeWidth={2.2}
                             />
                         </button>
@@ -382,7 +1405,15 @@ export default function Navbar() {
 
                 {/* ================= RIGHT SIDE ================= */}
 
-                <div className="flex items-center gap-4">
+                <div
+                    className="
+                        flex
+                        items-center
+                        gap-2
+                        lg:gap-3
+                        flex-shrink-0
+                    "
+                >
 
                     {/* ================= SEARCH BAR ================= */}
 
@@ -391,13 +1422,15 @@ export default function Navbar() {
                             hidden
                             md:flex
                             items-center
-                            gap-3
-                            w-[420px]
-                            h-[48px]
+                            gap-2
+                            w-[180px]
+                            lg:w-[240px]
+                            xl:w-[360px]
+                            h-[42px]
                             rounded-full
                             border
                             border-black/10
-                            px-5
+                            px-4
                             bg-[#fafafa]
                             transition-all
                             duration-300
@@ -407,30 +1440,59 @@ export default function Navbar() {
                     >
 
                         <Search
-                            size={18}
+                            size={17}
                             className="text-black/40"
                         />
 
                         <input
                             type="text"
-                            placeholder="Search for products..."
+                            placeholder="Search products..."
                             className="
                                 w-full
                                 bg-transparent
                                 outline-none
-                                text-[14px]
+                                text-[13px]
                                 placeholder:text-black/35
                             "
                         />
                     </div>
+
+                    {/* ================= MOBILE SEARCH ================= */}
+
+                    <button
+                        className="
+                            md:hidden
+                            w-9
+                            h-9
+                            sm:w-10
+                            sm:h-10
+                            rounded-full
+                            border
+                            border-black/15
+                            flex
+                            items-center
+                            justify-center
+                            hover:bg-black
+                            hover:text-white
+                            transition-all
+                            duration-300
+                        "
+                    >
+                        <Search
+                            size={18}
+                            className="sm:size-[20px]"
+                        />
+                    </button>
 
                     {/* ================= CART BUTTON ================= */}
 
                     <button
                         className="
                             relative
-                            w-[42px]
-                            h-[42px]
+                            w-9
+                            h-9
+                            sm:w-[42px]
+                            sm:h-[42px]
                             rounded-full
                             border
                             border-black/15
@@ -445,7 +1507,8 @@ export default function Navbar() {
                     >
 
                         <ShoppingCart
-                            size={22}
+                            size={18}
+                            className="sm:size-[20px]"
                             strokeWidth={1.8}
                         />
 
@@ -454,14 +1517,17 @@ export default function Navbar() {
                         <div
                             className="
                                 absolute
-                                -top-2
-                                -right-2
-                                w-5
-                                h-5
+                                -top-1.5
+                                -right-1.5
+                                w-4.5
+                                h-4.5
+                                sm:w-5
+                                sm:h-5
                                 rounded-full
                                 bg-black
                                 text-white
-                                text-[10px]
+                                text-[9px]
+                                sm:text-[10px]
                                 font-semibold
                                 flex
                                 items-center
@@ -478,8 +1544,10 @@ export default function Navbar() {
 
                     <button
                         className="
-                            w-[42px]
-                            h-[42px]
+                            w-9
+                            h-9
+                            sm:w-[42px]
+                            sm:h-[42px]
                             rounded-full
                             border
                             border-black/15
@@ -493,7 +1561,8 @@ export default function Navbar() {
                         "
                     >
                         <CircleUser
-                            size={22}
+                            size={18}
+                            className="sm:size-[20px]"
                             strokeWidth={1.8}
                         />
                     </button>
